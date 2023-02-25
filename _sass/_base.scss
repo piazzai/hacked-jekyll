@@ -3,8 +3,8 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4;
-  background-color: var(--oc-gray-9);
-  color: var(--oc-green-4);
+  background-color: $background-color;
+  color: $text-color;
 }
 
 main {
@@ -23,7 +23,8 @@ a {
   color: inherit;
   font-style: italic;
 
-  &:hover,&:active {
-    color: var(--oc-green-5);
+  &:hover,
+  &:active {
+    color: darken($text-color, 10%);
   }
 }

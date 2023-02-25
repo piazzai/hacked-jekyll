@@ -1,0 +1,7 @@
+$color-scheme: (
+  "background": #212529,
+  "text": #69db7c,
+);
+
+$background-color: map-get($color-scheme, "background");
+$text-color: map-get($color-scheme, "text");
