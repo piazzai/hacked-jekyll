@@ -13,7 +13,6 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: lowercase;
-  border: 1px solid red;
 
   @media (min-width: 576px) {
     font-size: 18px;
