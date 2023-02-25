@@ -9,7 +9,11 @@
     content: "}";
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 576px) {
+    padding-left: 3rem;
+  }
+
+  @media (min-width: 768px) {
     padding-left: 0;
   }
 }
