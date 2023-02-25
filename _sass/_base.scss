@@ -13,32 +13,115 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: lowercase;
+}
 
-  div p {
-    margin-left: 1.5rem;
-  }
+p {
+  margin: 0;
+}
 
-  span.key:after {
-    content: ": ";
-  }
+a {
+  color: inherit;
+  font-style: italic;
 
-  span.attr {
-    &:before {
-      content: '"';
-    }
-
-    &:after {
-      content: '",';
-    }
-  }
-
-  a {
-    color: inherit;
-    font-style: italic;
-
-    &:hover,
-    &:active {
-      color: darken($text-color, 10%);
-    }
+  &:hover,
+  &:active {
+    color: darken($text-color, 20%);
   }
 }
+
+.json {
+  &:before {
+    content: "{";
+  }
+  &:after {
+    content: "}";
+  }
+}
+
+.block {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.key:after {
+  content: ": ";
+}
+
+.attr,
+.list-attr {
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '",';
+  }
+}
+
+.array-key:after {
+  content: ": [";
+}
+
+.array-attr {
+  margin-left: 1.5rem;
+
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '",';
+  }
+}
+
+.array:after {
+  content: "],";
+}
+
+.list-key:after {
+  content: ": {";
+}
+
+.list:after {
+  content: "},";
+}
+
+.list-subkey {
+  margin-left: 1.5rem;
+
+  &:after {
+    content: ": ";
+  }
+}
+
+// a {
+//   color: inherit;
+//   font-style: italic;
+
+//   &:hover,
+//   &:active {
+//     color: darken($text-color, 10%);
+//   }
+// }
+
+// div {
+//   margin: 0;
+// }
+
+// p.array,
+// div.array {
+//   margin-left: 1.5rem;
+// }
+
+// span.key:after {
+//   content: ": ";
+// }
+
+// span.attr {
+//   &:before {
+//     content: '"';
+//   }
+
+//   &:after {
+//     content: '",';
+//   }
+// }
