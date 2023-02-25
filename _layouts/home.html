@@ -3,11 +3,32 @@ layout: default
 ---
 
 <main>
-  <p>{</p>
-  <p>
-    <span class="key">name:</span> "{{ site.json.name }}",<br />
-    <span class="key">description:</span> {% include typed.html %}
-  </p>
-  <p><span class="key">cv:</span> "<a href="assets/cv.pdf">cv.pdf</a>"</p>
-  <p>}</p>
+  <div>
+    <span>{</span>
+    <p>
+      <span class="key">name</span>
+      <span class="attr">{{ site.json.name }}</span>
+      <br />
+      <span class="key">description</span>
+      {% include typed.html %}
+    </p>
+    <p>
+      {% assign cv = site.json.cv | split: "/" | slice: -1 %}
+      <span class="key">cv</span>
+      <span class="attr"><a href="{{ site.json.cv }}">{{ cv }}</a></span>
+    </p>
+    <p>
+      {% assign mailto = site.json.email | prepend: "mailto:" %}
+      <span class="key">email</span>
+      <span class="attr"><a href="{{ mailto }}">{{ site.json.email }}</a></span>
+      <br />
+      {% assign web = site.json.webpage | prepend: "https://" %}
+      <span class="key">homepage</span>
+      <span class="attr"><a href="{{ web }}">{{ site.json.webpage }}</a></span>
+    </p>
+    <p>
+
+    </p>
+    <span>}</span>
+  </div>
 </main>
