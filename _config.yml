@@ -1,6 +1,16 @@
 title: Place Holder
 description: Personal website
 baseurl: ""
+url: https://hacked.netlify.app
+
+json:
+  name: Hacked
+  description:
+    - Hello!
+    - Work in progress
+  cv: assets/cv.pdf
+  email: username@domain.com
+  webpage: hacked.netlify.app
 
 exclude:
   - LICENSE
