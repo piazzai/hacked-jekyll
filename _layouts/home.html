@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div id="typed-strings">
+  {% for i in site.typed %}
+  <p>"{{ i }}",</p>
+  {% endfor %}
+</div>
+
+<main>
+  <p>{</p>
+  <p>
+    <span class="key">name:</span> "{{ site.json.name }}",<br />
+    <span class="key">description:</span> {% include typed.html %}
+  </p>
+  <p><span class="key">cv:</span> "<a href="assets/cv.pdf">cv.pdf</a>"</p>
+  <p>}</p>
+</main>
