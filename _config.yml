@@ -9,20 +9,23 @@ json:
     - Hello!
     - Work in progress
   cv: assets/cv.pdf
-  institute: University of Jekyll
-  department: Department of Themes
-  address: 123 Main St, Anytown, USA
-  office: Foobar Hall 1.23
-  phone: +1 234 567 890
-  email: username@domain.com
-  facebook: https://www.facebook.com
-  twitter: https://twitter.com
-  instagram: https://www.instagram.com
-  linkedin: https://www.linkedin.com
-  stackoverflow: https://stackoverflow.com
-  github: https://github.com
+  address:
+    - University of Jekyll
+    - Department of Themes
+    - 123 Main St, Anytown, USA
+  contact:
+    office: Foobar Hall 1.23
+    phone: +1 234 567 890
+    email: username@domain.com
+  homepage: https://hacked.netlify.app
   source: https://github.com/piazzai/hacked
-  webpage: hacked.netlify.app
+  profiles:
+    facebook: https://www.facebook.com
+    twitter: https://twitter.com
+    instagram: https://www.instagram.com
+    linkedin: https://www.linkedin.com
+    stackoverflow: https://stackoverflow.com
+    github: https://github.com
 
 exclude:
   - LICENSE
