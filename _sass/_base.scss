@@ -2,29 +2,43 @@ body {
   font-family: "hack", monospace;
   font-size: 20px;
   font-weight: 400;
-  line-height: 1.4;
   background-color: $background-color;
   color: $text-color;
 }
 
 main {
   position: absolute;
-  width: 75%;
+  width: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-transform: lowercase;
 
-  @media (min-width: 768px) {
-    width: 50%;
+  div p {
+    margin-left: 1.5rem;
   }
-}
 
-a {
-  color: inherit;
-  font-style: italic;
+  span.key:after {
+    content: ": ";
+  }
 
-  &:hover,
-  &:active {
-    color: darken($text-color, 10%);
+  span.attr {
+    &:before {
+      content: '"';
+    }
+
+    &:after {
+      content: '",';
+    }
+  }
+
+  a {
+    color: inherit;
+    font-style: italic;
+
+    &:hover,
+    &:active {
+      color: darken($text-color, 10%);
+    }
   }
 }
