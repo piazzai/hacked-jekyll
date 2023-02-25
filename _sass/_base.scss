@@ -1,6 +1,6 @@
 body {
   font-family: "hack", monospace;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   background-color: var(--oc-gray-9);
   color: var(--oc-green-4);
@@ -8,11 +8,24 @@ body {
 
 main {
   position: absolute;
-  width: 50%;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: lowercase;
+  border: 1px solid red;
+
+  @media (min-width: 576px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 992px) {
+    width: auto;
+  }
 }
 
 p {
