@@ -2,33 +2,43 @@
 layout: default
 ---
 
-<main>
-  <div>
-    <span>{</span>
-    <p>
-      <span class="key">name</span>
-      <span class="attr">{{ site.json.name }}</span>
-      <br />
-      <span class="key">description</span>
-      {% include typed.html %}
-    </p>
-    <p>
-      {% assign cv = site.json.cv | split: "/" | slice: -1 %}
-      <span class="key">cv</span>
-      <span class="attr"><a href="{{ site.json.cv }}">{{ cv }}</a></span>
-    </p>
-    <p>
-      {% assign mailto = site.json.email | prepend: "mailto:" %}
-      <span class="key">email</span>
-      <span class="attr"><a href="{{ mailto }}">{{ site.json.email }}</a></span>
-      <br />
-      {% assign web = site.json.webpage | prepend: "https://" %}
-      <span class="key">homepage</span>
-      <span class="attr"><a href="{{ web }}">{{ site.json.webpage }}</a></span>
-    </p>
-    <p>
-
-    </p>
-    <span>}</span>
+<main class="json">
+  <div class="block">
+    <p><span class="key">name</span><span class="attr">{{ site.json.name }}</span></p>
+    <p><span class="key">description</span>{% include typed.html %}</p>
+  </div>
+  <div class="block">
+    {% assign cv = site.json.cv | split: "/" | slice: -1 %}
+    <span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}">{{ cv }}</a></span>
+  </div>
+  <div class="block">
+    <span class="array-key">address</span>
+    <div class="array">
+      {% for i in site.json.address %}
+      <p class="array-attr">{{ i }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="block">
+    <span class="list-key">contact</span>
+    <div class="list">
+      {% for i in site.json.contact %}
+      <p><span class="list-subkey">{{ i | slice: 0 }}</span><span class="list-attr">{{ i | slice: 1 }}</span></p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="block">
+    {% assign home = site.json.homepage | split: "//" | slice: 1 %}
+    <p><span class="key">homepage</span><span class="attr"><a href="{{ site.json.homepage }}">{{ home }}</a></span></p>
+    {% assign src = site.json.source | split: "//" | slice: 1 %}
+    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}">{{ src }}</a></span></p>
+  </div>
+  <div class="block">
+    <span class="array-key">profiles</span>
+    <div class="array">
+      {% for i in site.json.profiles %}
+      <p class="array-attr"><a href="{{ i | slice: 1 }}">{{ i | slice: 0 }}</a></p>
+      {% endfor %}
+    </div>
   </div>
 </main>
