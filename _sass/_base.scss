@@ -92,36 +92,3 @@ a {
     content: ": ";
   }
 }
-
-// a {
-//   color: inherit;
-//   font-style: italic;
-
-//   &:hover,
-//   &:active {
-//     color: darken($text-color, 10%);
-//   }
-// }
-
-// div {
-//   margin: 0;
-// }
-
-// p.array,
-// div.array {
-//   margin-left: 1.5rem;
-// }
-
-// span.key:after {
-//   content: ": ";
-// }
-
-// span.attr {
-//   &:before {
-//     content: '"';
-//   }
-
-//   &:after {
-//     content: '",';
-//   }
-// }
