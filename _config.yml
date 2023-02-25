@@ -19,7 +19,7 @@ json:
     phone: +1 234 567 890
     email: username@domain.com
   homepage: https://hacked.netlify.app
-  source: https://github.com/piazzai/hacked
+  repo: https://github.com/piazzai/hacked
   profiles:
     facebook: https://www.facebook.com
     twitter: https://twitter.com

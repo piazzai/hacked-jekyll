@@ -30,8 +30,8 @@ layout: default
   <div class="block">
     {% assign home = site.json.homepage | split: "//" | slice: 1 %}
     <p><span class="key">homepage</span><span class="attr"><a href="{{ site.json.homepage }}">{{ home }}</a></span></p>
-    {% assign src = site.json.source | split: "//" | slice: 1 %}
-    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}">{{ src }}</a></span></p>
+    {% assign repo = site.json.repo | split: "//" | slice: 1 %}
+    <p><span class="key">repo</span><span class="attr"><a href="{{ site.json.repo }}">{{ repo }}</a></span></p>
   </div>
   <div class="block">
     <span class="array-key">profiles</span>
