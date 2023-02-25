@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    <div id="typed-strings">
-      {% for i in site.json.description %}
-      <span>{{ i | prepend: '"' | append: '",'}}</span>
-      {% endfor %}
-    </div>
-    {{ content }}
-  </body>
+<body>
+  <div id="typed-strings">
+    {% for i in site.json.description %}
+    <span>{{ i | prepend: '"' | append: '",'}}</span>
+    {% endfor %}
+  </div>
+  {{ content }}
+</body>
+
 </html>
