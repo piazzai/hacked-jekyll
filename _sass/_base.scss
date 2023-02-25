@@ -2,8 +2,8 @@ body {
   font-family: "hack", monospace;
   font-size: 20px;
   font-weight: 400;
-  background-color: $background-color;
-  color: $text-color;
+  background-color: var(--oc-gray-9);
+  color: var(--oc-green-4);
 }
 
 main {
@@ -25,7 +25,7 @@ a {
 
   &:hover,
   &:active {
-    color: darken($text-color, 20%);
+    color: var(--oc-green-5);
   }
 }
 
