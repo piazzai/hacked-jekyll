@@ -1,0 +1,11 @@
+title: Place Holder
+description: Personal website
+baseurl: ""
+
+exclude:
+  - LICENSE
+  - README.md
+
+sass:
+  sass_dir: _sass
+  sourcemap: never
