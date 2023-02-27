@@ -12,22 +12,26 @@ The style is rebooted through [normalize.css](https://necolas.github.io/normaliz
 
 ## Usage
 
-Besides replacing favicons, all customization happens in the `json` section of `_config.yml`. The color scheme is determined by three lines in `_sass/base.scss`:
+Besides replacing favicons, all customization happens in the `json:` section of `_config.yml`. The color scheme is determined by three lines in `_sass/base.scss`:
 
 ```scss
 body {
-  ...
-  background-color: var(--oc-gray-9);
-  color: var(--oc-green-4);
+  font-family: "hack", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--oc-gray-9);   // background color
+  color: var(--oc-green-4);             // main text and link color
 }
 ```
 
 ```scss
 a {
-  ...
+  color: inherit;
+  font-style: italic;
+
   &:hover,
   &:active {
-    color: var(--oc-green-5);
+    color: var(--oc-green-5);           // hover link color
   }
 }
 ```
