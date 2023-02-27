@@ -20,7 +20,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: var(--oc-gray-9);   // background color
-  color: var(--oc-green-4);             // main text and link color
+  color: var(--oc-green-4);             // main text and links
 }
 ```
 
@@ -31,7 +31,7 @@ a {
 
   &:hover,
   &:active {
-    color: var(--oc-green-5);           // hover link color
+    color: var(--oc-green-5);           // hover links
   }
 }
 ```
