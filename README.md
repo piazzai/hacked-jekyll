@@ -1,4 +1,4 @@
-# hacked
+# hacked-jekyll
 
 Hacked Jekyll is a responsive, minimalistic Jekyll theme for a tiny (163.2 kb!) personal website. It consists of a homepage and a 404 page. The homepage lists information set within the configuration file in a format that resembles JSON, giving the website a "hacked" appearance. The `description` field uses [typed.js](https://mattboldt.com/demos/typed-js/) to cycle through multiple lines of text, as long as multiple lines are provided in the configuration.
 
@@ -42,4 +42,4 @@ a {
 
 ## Bugs
 
-If you find any problem using the theme, please [open an issue](https://github.com/piazzai/hacked/issues).
+If you find any problem using the theme, please [open an issue](https://github.com/piazzai/hacked-jekyll/issues).
