@@ -1,20 +1,11 @@
 .json {
   white-space: nowrap;
-  padding-left: 1.5rem;
 
   &:before {
     content: "{";
   }
   &:after {
     content: "}";
-  }
-
-  @media (min-width: 576px) {
-    padding-left: 3rem;
-  }
-
-  @media (min-width: 768px) {
-    padding-left: 0;
   }
 }
 
