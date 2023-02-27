@@ -5,7 +5,11 @@ layout: default
 <main class="json">
   <div class="block">
     <p><span class="key">name</span><span class="attr">{{ site.json.name }}</span></p>
+    {% if site.json.description.first %}
     <p><span class="key">description</span>{% include typed.html %}</p>
+    {% else %}
+    <p><span class="key">description</span>{{ site.json.description }}</p>
+    {% endif %}
   </div>
   <div class="block">
     {% assign cv = site.json.cv | split: "/" | slice: -1 %}
