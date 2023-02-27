@@ -11,7 +11,7 @@ json:
   name: Place Holder
   description:
     - Hello!
-    - This tiny site
+    - This tiny website
     - Looks like json
   cv: assets/cv.pdf
   address:
