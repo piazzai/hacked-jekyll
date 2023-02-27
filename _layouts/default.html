@@ -4,13 +4,6 @@
 {% include head.html %}
 
 <body>
-  <div id="typed-strings">
-    {% if site.json.description.first %}
-    {% for i in site.json.description %}
-    <span>{{ i | prepend: '"' | append: '",'}}</span>
-    {% endfor %}
-    {% endif %}
-  </div>
   {{ content }}
 </body>
 

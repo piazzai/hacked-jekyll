@@ -11,6 +11,11 @@ layout: default
     {% endif %}
     {% if site.json.description %}
     {% if site.json.description.first %}
+    <div id="typed-strings">
+      {% for i in site.json.description %}
+      <span>{{ i | prepend: '"' | append: '",'}}</span>
+      {% endfor %}
+    </div>
     <p><span class="key">description</span>{% include typed.html %}</p>
     {% else %}
     <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
