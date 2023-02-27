@@ -14,7 +14,7 @@ The style is rebooted through [normalize.css](https://necolas.github.io/normaliz
 
 Besides replacing favicons, all customization happens in the `json` section of `_config.yml`. The color scheme is determined by three lines in `_sass/base.scss`:
 
-```css
+```scss
 body {
   ...
   background-color: var(--oc-gray-9);
@@ -22,7 +22,7 @@ body {
 }
 ```
 
-```css
+```scss
 a {
   ...
   &:hover,
