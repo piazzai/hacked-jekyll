@@ -12,9 +12,9 @@ The style is rebooted through [normalize.css](https://necolas.github.io/normaliz
 
 ## Usage
 
-All customization happens in the `json` section of `_config.yml`. Eight variables can be set, including the user's name and description (note: this is not the same as site description, which is set separately and above), path to the CV, address and contact details, homepage, repository, and social profiles. All of these variables are optional.
+All customization happens in the `json` section of `_config.yml`. Eight variables can be set, including the user's name and description (note that this is not the same as site description), path to the CV, address and contact details, homepage, repository, and social profiles. All of these variables are optional.
 
-The user description and address can be set as arrays (default) or single strings. The contact variable can be set as a hash (default) or single string. The profiles variable must necessarily be a hash.
+The user description and address variables can be set as arrays (default) or single strings. The contact variable can be set as a hash (default) or single string. The profiles variable must necessarily be a hash.
 
 The color scheme is determined by three lines in `_sass/base.scss`.
 
