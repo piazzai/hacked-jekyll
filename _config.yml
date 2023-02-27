@@ -1,14 +1,14 @@
 # this is only for search engines, it does not appear in the home
 # as long as the json variables name and description are provided
-title: Hacked
-description: Jekyll microtheme that looks like json
+title: Hacked Jekyll
+description: Jekyll microtheme that looks like JSON
 baseurl: ""
-url: https://hacked.netlify.app
+url: https://hacked-jekyll.netlify.app
 
 # this information shows on the homepage, all fields are optional and
 # can be declared eitehr as a single string or as a string array/hash
 json:
-  name: Hacked
+  name: Place Holder
   description:
     - Hello!
     - This tiny site
@@ -22,8 +22,8 @@ json:
     office: Foobar Hall 1.23
     phone: +1 234 567 890
     email: username@domain.com
-  homepage: https://hacked.netlify.app
-  repo: https://github.com/piazzai/hacked
+  homepage: https://hacked-jekyll.netlify.app
+  repo: https://github.com/piazzai/hacked-jekyll
   profiles:
     facebook: https://www.facebook.com
     twitter: https://twitter.com
