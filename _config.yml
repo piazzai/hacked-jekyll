@@ -22,8 +22,8 @@ json:
     office: Foobar Hall 1.23
     phone: +1 234 567 890
     email: username@domain.com
-  homepage: https://hacked-jekyll.netlify.app
-  repo: https://github.com/piazzai/hacked-jekyll
+  demo: https://hacked-jekyll.netlify.app
+  source: https://github.com/piazzai/hacked-jekyll
   profiles:
     facebook: https://www.facebook.com
     twitter: https://twitter.com
