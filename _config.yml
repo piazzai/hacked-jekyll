@@ -5,8 +5,8 @@ description: Jekyll microtheme that looks like JSON
 baseurl: ""
 url: https://hacked-jekyll.netlify.app
 
-# this information shows on the homepage, all fields are optional and
-# can be declared eitehr as a single string or as a string array/hash
+# this information is shown on the homepage, all fields are optional and
+# can be declared either as a single string or as a string array/hash
 json:
   name: Place Holder
   description:
