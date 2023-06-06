@@ -36,6 +36,13 @@ exclude:
   - LICENSE
   - README.md
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-sitemap
+
 sass:
   sass_dir: _sass
   sourcemap: never
