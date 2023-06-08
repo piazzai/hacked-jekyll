@@ -8,7 +8,7 @@ layout: default
         <p>Page not found</p>
     </div>
     <div class="block">
-        {% assign home = site.json.demo | split: "//" | slice: 1 %}
-        <a href="{{ site.json.demo }}">{{ home }}</a>
+        {% assign home = site.url | split: "//" | slice: 1 %}
+        <a href="{{ site.url }}">{{ home }}</a>
     </div>
 </main>
