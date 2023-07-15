@@ -27,7 +27,7 @@ layout: default
   <div class="block">
     {% if site.json.cv %}
     {% assign cv = site.json.cv | split: "/" | slice: -1 %}
-    <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}">{{ cv }}</a></span></p>
+    <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}" target="_blank">{{ cv }}</a></span></p>
     {% endif %}
   </div>
   <div class="block">
@@ -61,11 +61,11 @@ layout: default
   <div class="block">
     {% if site.json.demo %}
     {% assign demo = site.json.demo | split: "//" | slice: 1 %}
-    <p><span class="key">demo</span><span class="attr"><a href="{{ site.json.demo }}">{{ demo }}</a></span></p>
+    <p><span class="key">demo</span><span class="attr"><a href="{{ site.json.demo }}" target="_blank">{{ demo }}</a></span></p>
     {% endif %}
     {% if site.json.source %}
     {% assign source = site.json.source | split: "github.com/" | slice: 1 %}
-    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}">{{ source }}</a></span></p>
+    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}" target="_blank">{{ source }}</a></span></p>
     {% endif %}
   </div>
   <div class="block">
