@@ -58,7 +58,7 @@ GEM
     rexml (3.2.5)
     rouge (4.1.2)
     safe_yaml (1.0.5)
-    sass-embedded (1.63.6)
+    sass-embedded (1.64.1)
       google-protobuf (~> 3.23)
       rake (>= 13.0.0)
     terminal-table (3.0.2)
@@ -70,10 +70,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll (~> 4.3.2)
+  jekyll (~> 4.3, >= 4.3.2)
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
-  webrick (~> 1.8.1)
+  webrick (~> 1.8, >= 1.8.1)
 
 BUNDLED WITH
    2.3.5
