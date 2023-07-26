@@ -73,7 +73,6 @@ DEPENDENCIES
   jekyll (~> 4.3, >= 4.3.2)
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
-  webrick (~> 1.8, >= 1.8.1)
 
 BUNDLED WITH
-   2.3.5
+   2.4.17
