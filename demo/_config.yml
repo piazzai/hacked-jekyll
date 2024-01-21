@@ -28,7 +28,7 @@ json:
   source: https://github.com/piazzai/hacked-jekyll
   profiles:
     facebook: https://www.facebook.com
-    twitter: https://twitter.com
+    x: https://www.x.com
     instagram: https://www.instagram.com
     linkedin: https://www.linkedin.com
     stackoverflow: https://stackoverflow.com
