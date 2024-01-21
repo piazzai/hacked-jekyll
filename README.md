@@ -48,7 +48,7 @@ It is possible to set up the site so that all links open in the same tab (defaul
 newtab: true
 ```
 
-It is also possible to change the color scheme. If you want to do so, you should create a file called `_sass/base.scss` with the following CSS code:
+It is also possible to change the color scheme. If you want to do so, you should create a file called `_sass/base.scss` with the following code:
 
 ```scss
 body {
@@ -62,7 +62,7 @@ a:active {
 }
 ```
 
-You can change the values of the variable to any color you want, using Open Color's naming convention (see the [docs](https://yeun.github.io/open-color/documents.html))
+The values above are defaults. You can change them to any color you want using hexadecimal codes, base CSS names, or Open Color names as in the example above. In the latter case, please [read the docs](https://yeun.github.io/open-color/documents.html) of the Open Color library to familiarize with the naming convention.
 
 ## Bugs
 
