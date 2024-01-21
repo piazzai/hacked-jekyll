@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "hacked-jekyll"
-  spec.version       = "1.3.0"
+  spec.version       = "1.2.1"
   spec.authors       = ["piazzai"]
   spec.email         = ["42124135+piazzai@users.noreply.github.com"]
 
