@@ -6,13 +6,35 @@ The style is rebooted through [normalize.css](https://necolas.github.io/normaliz
 
 See the [demo](https://hacked-jekyll.netlify.app) to check the end result.
 
-![](https://github.com/piazzai/hacked-jekyll/blob/master/screenshot.jpg)
+![](https://github.com/piazzai/hacked-jekyll/blob/master/screenshot.png)
 
 ## Installation
 
-1.  Clone this repository.
-2.  Rename it to `[username].github.io`.
-3.  Start editing!
+The theme can be installed as usual by cloning this repository and editing the files. However, it is far more convenient to install it as a gem, in which case all the files you do not want or need to customize remain hidden from view, but will still be read and processed during build.
+
+To install the theme as a gem, you can then add this line to your `Gemfile`:
+
+```ruby
+gem "hacked-jekyll"
+```
+
+And this line to `_config.yml`:
+
+```yaml
+theme: hacked-jekyll
+```
+
+The easiest way to set up a new website in this way is to clone the contents of the `demo` folder. This provides a working set of files to get you started.
+
+After you are done creating the basic files, run bundler:
+
+    $ bundle
+
+Or install the gem yourself as:
+
+    $ gem install hacked-jekyll
+
+To customize hidden files, you can create new files with the same names and paths. For example, to change the layout of the index page, you can create a `_layouts` folder and a file `index.html` within this folder that contains your custom code. During build, Jekyll will give priority to your files over the theme's.
 
 ## Usage
 
