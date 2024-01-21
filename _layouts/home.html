@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% assign target = 'target="_self"' %}
+{% if site.newtab %}
+{% assign target = 'target="_blank"' %}
+{% endif %}
+
 <main class="json">
   <div class="block">
     {% if site.json.name %}
@@ -27,7 +32,7 @@ layout: default
   <div class="block">
     {% if site.json.cv %}
     {% assign cv = site.json.cv | split: "/" | slice: -1 %}
-    <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}" target="_blank">{{ cv }}</a></span></p>
+    <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}" {{ target }}>{{ cv }}</a></span></p>
     {% endif %}
   </div>
   <div class="block">
@@ -61,11 +66,13 @@ layout: default
   <div class="block">
     {% if site.json.demo %}
     {% assign demo = site.json.demo | split: "//" | slice: 1 %}
-    <p><span class="key">demo</span><span class="attr"><a href="{{ site.json.demo }}" target="_blank">{{ demo }}</a></span></p>
+    <p><span class="key">demo</span><span class="attr"><a href="{{ site.json.demo }}" {{ target }}>{{ demo }}</a></span>
+    </p>
     {% endif %}
     {% if site.json.source %}
     {% assign source = site.json.source | split: "github.com/" | slice: 1 %}
-    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}" target="_blank">{{ source }}</a></span></p>
+    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}" {{ target }}>{{ source
+          }}</a></span></p>
     {% endif %}
   </div>
   <div class="block">
@@ -73,7 +80,7 @@ layout: default
     <span class="array-key">profiles</span>
     <div class="array">
       {% for i in site.json.profiles %}
-      <p class="array-attr"><a href="{{ i | slice: 1 }}" target="_blank">{{ i | slice: 0 }}</a></p>
+      <p class="array-attr"><a href="{{ i | slice: 1 }}" {{ target }}>{{ i | slice: 0 }}</a></p>
       {% endfor %}
     </div>
     {% endif %}

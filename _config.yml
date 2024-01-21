@@ -3,6 +3,8 @@ description: ""
 baseurl: ""
 url: ""
 
+newtab: false
+
 exclude:
   - demo/
   - hacked-jekyll.gemspec
