@@ -1,49 +1,19 @@
-# this is only for search engines, it does not appear in the home
-# as long as the json variables name and description are provided
-title: Hacked Jekyll
-description: Jekyll microtheme that looks like JSON
+title: ""
+description: ""
 baseurl: ""
-url: https://hacked-jekyll.netlify.app
-
-# this information is shown on the homepage, all fields are optional and
-# can be declared either as a single string or as a string array/hash
-json:
-  name: Place Holder
-  description:
-    - Hello!
-    - This tiny website
-    - Looks like json
-  cv: assets/cv.pdf
-  address:
-    - University of Jekyll
-    - Department of Themes
-    - 123 Main St, Anytown, USA
-  contact:
-    office: Foobar Hall 1.23
-    phone: +1 234 567 890
-    email: username@domain.com
-  demo: https://hacked-jekyll.netlify.app
-  source: https://github.com/piazzai/hacked-jekyll
-  profiles:
-    facebook: https://www.facebook.com
-    twitter: https://twitter.com
-    instagram: https://www.instagram.com
-    linkedin: https://www.linkedin.com
-    stackoverflow: https://stackoverflow.com
-    github: https://github.com
+url: ""
 
 exclude:
+  - demo/
+  - hacked-jekyll.gemspec
   - LICENSE
   - README.md
+  - screenshot.png
 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-whitelist:
-  - jekyll-sitemap
-
 sass:
-  sass_dir: _sass
   style: compressed
   sourcemap: never
