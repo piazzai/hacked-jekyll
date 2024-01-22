@@ -15,7 +15,7 @@ json:
     - Hello!
     - This tiny website
     - Looks like json
-  cv: /assets/cv.pdf
+  cv: cv.pdf
   address:
     - University of Jekyll
     - Department of Themes
