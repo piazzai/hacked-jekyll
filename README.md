@@ -24,7 +24,7 @@ And this line to `_config.yml`:
 theme: hacked-jekyll
 ```
 
-The easiest way to set up a new website in this way is to clone the contents of the `demo` folder. This provides a working set of files to get you started.
+The easiest way to set up a new website in this way is to clone the contents of the `docs` folder. This provides a working set of files to get you started.
 
 After you are done creating the basic files, run bundler:
 
