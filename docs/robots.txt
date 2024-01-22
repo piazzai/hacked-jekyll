@@ -1,1 +1,1 @@
-Sitemap: https://hacked-jekyll.netlify.app/sitemap.xml
+Sitemap: https://piazzai.github.io/hacked-jekyll/sitemap.xml
