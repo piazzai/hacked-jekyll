@@ -28,7 +28,6 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-transform: lowercase;
 }
 
 @media (min-width: 576px) {
@@ -86,7 +85,11 @@ a:active {
 }
 
 .error,
-.key,
+.key {
+  text-transform: lowercase;
+  color: var(--oc-green-4);
+}
+
 .value {
   text-transform: lowercase;
   color: var(--oc-green-4);
