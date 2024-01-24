@@ -7,14 +7,6 @@ quote: true
 comma: true
 target: "_self"
 
-exclude:
-  - demo/
-  - docs/
-  - hacked-jekyll.gemspec
-  - LICENSE
-  - README.md
-  - screenshot.png
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
