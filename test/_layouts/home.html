@@ -2,8 +2,12 @@
 layout: default
 ---
 
+{% if site.quote -%}
 {% assign quote = '"' -%}
+{% endif -%}
+{% if site.comma -%}
 {% assign comma = ',' -%}
+{% endif -%}
 
 <div id="json">
   {% for pair in site.data.json %}
