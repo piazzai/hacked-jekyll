@@ -1,38 +1,9 @@
-# this is only for search engines, it does not appear in the home
-# as long as the json variables name and description are provided
 title: Hacked Jekyll
 description: Jekyll microtheme that looks like JSON
 baseurl: ""
 url: https://piazzai.github.io/hacked-jekyll
 
 theme: hacked-jekyll
-
-# this information is shown on the homepage, all fields are optional and
-# can be declared either as a single string or as a string array/hash
-json:
-  name: Place Holder
-  description:
-    - Hello!
-    - This tiny website
-    - Looks like json
-  cv: cv.pdf
-  address:
-    - University of Jekyll
-    - Department of Themes
-    - 123 Main St, Anytown, USA
-  contact:
-    office: Foobar Hall 1.23
-    phone: +1 234 567 890
-    email: username@domain.com
-  demo: https://piazzai.github.io/hacked-jekyll
-  source: https://github.com/piazzai/hacked-jekyll
-  profiles:
-    facebook: https://www.facebook.com
-    x: https://www.x.com
-    instagram: https://www.instagram.com
-    linkedin: https://www.linkedin.com
-    stackoverflow: https://stackoverflow.com
-    github: https://github.com
 
 exclude:
   - LICENSE

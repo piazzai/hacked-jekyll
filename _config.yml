@@ -3,10 +3,13 @@ description: ""
 baseurl: ""
 url: ""
 
-newtab: false
+quote: true
+comma: true
+target: "_self"
 
 exclude:
   - demo/
+  - docs/
   - hacked-jekyll.gemspec
   - LICENSE
   - README.md
@@ -15,7 +18,3 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-
-sass:
-  style: compressed
-  sourcemap: never

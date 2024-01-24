@@ -2,87 +2,77 @@
 layout: default
 ---
 
-{% assign target = 'target="_self"' %}
-{% if site.newtab %}
-{% assign target = 'target="_blank"' %}
-{% endif %}
+{% if site.quote -%}
+{% assign quote = '"' -%}
+{% endif -%}
+{% if site.comma -%}
+{% assign comma = ',' -%}
+{% endif -%}
+{% assign target = site.target | prepend: 'target="' | append: '"' -%}
 
-<main class="json">
-  <div class="block">
-    {% if site.json.name %}
-    <p><span class="key">name</span><span class="attr">{{ site.json.name }}</span></p>
-    {% else %}
-    <p><span class="key">name</span><span class="attr">{{ site.title }}</span></p>
-    {% endif %}
-    {% if site.json.description %}
-    {% if site.json.description.first %}
-    <div id="typed-strings">
-      {% for i in site.json.description %}
-      <span>{{ i | prepend: '"' | append: '",'}}</span>
-      {% endfor %}
+<div id="json">
+  {% for pair in site.data.json %}
+  <div class="my ms">
+    {% if pair.typed -%}
+    <div id="strings">
+      {% for value in pair.value -%}
+      <span>{{ value }}</span>
+      {%- endfor %}
     </div>
-    <p><span class="key">description</span>{% include typed.html %}</p>
-    {% else %}
-    <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
-    {% endif %}
-    {% else %}
-    <p><span class="key">description</span><span class="attr">{{ site.description }}</span></p>
-    {% endif %}
-  </div>
-  <div class="block">
-    {% if site.json.cv %}
-    {% assign cv = site.json.cv | split: "/" | slice: -1 %}
-    <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}" {{ target }}>{{ cv }}</a></span></p>
-    {% endif %}
-  </div>
-  <div class="block">
-    {% if site.json.address %}
-    {% if site.json.address.first %}
-    <p><span class="array-key">address</span></p>
-    <div class="array">
-      {% for i in site.json.address %}
-      <p class="array-attr">{{ i }}</p>
-      {% endfor %}
-    </div>
-    {% else %}
-    <p><span class="key">address</span><span class="attr">{{ site.json.address }}</span></p>
-    {% endif %}
-    {% endif %}
-  </div>
-  <div class="block">
-    {% if site.json.contact %}
-    {% if site.json.contact.first %}
-    <p><span class="list-key">contact</span></p>
-    <div class="list">
-      {% for i in site.json.contact %}
-      <p><span class="list-subkey">{{ i | slice: 0 }}</span><span class="list-attr">{{ i | slice: 1 }}</span></p>
-      {% endfor %}
-    </div>
-    {% else %}
-    <p><span class="key">contact</span><span class="attr">{{ site.json.contact }}</span></p>
-    {% endif %}
-    {% endif %}
-  </div>
-  <div class="block">
-    {% if site.json.demo %}
-    {% assign demo = site.json.demo | split: "//" | slice: 1 %}
-    <p><span class="key">demo</span><span class="attr"><a href="{{ site.json.demo }}" {{ target }}>{{ demo }}</a></span>
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
+    {{ quote }}<span class="value"><span id="typed"></span></span>{{ quote }}
+    {%- elsif pair.value.first.key -%}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}: [
+    {% for value in pair.value -%}
+    {% if value.url -%}
+    <p class="ms">
+      {{ quote }}<span class="key">{{ value.key }}</span>{{ quote }}:
+      {{ quote }}<a class="value" href="{{ value.url }}" {{ target }}>{{ value.value }}</a>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
     </p>
-    {% endif %}
-    {% if site.json.source %}
-    {% assign source = site.json.source | split: "github.com/" | slice: 1 %}
-    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}" {{ target }}>{{ source
-          }}</a></span></p>
-    {% endif %}
+    {% else -%}
+    <p class="ms">
+      {{ quote }}<span class="key">{{ value.key }}</span>{{ quote }}:
+      {{ quote }}<span class="value">{{ value.value }}</span>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% endif -%}
+    {%- endfor -%}
+    ]
+    {%- elsif pair.value.first -%}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}: [
+    {% for value in pair.value -%}
+    {% if value.url -%}
+    <p class="ms">
+      {{ quote }}<a class="value" href="{{ value.url }}" {{ target }}>{{ value.value }}</a>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% else -%}
+    <p class="ms">
+      {{ quote }}<span class="value">{{ value }}</span>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% endif -%}
+    {%- endfor -%}
+    ]
+    {%- elsif pair.url -%}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
+    {{ quote }}<a class="value" href="{{ pair.url }}" {{ target }}>{{ pair.value }}</a>{{ quote }}
+    {%- else -%}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
+    {{ quote }}<span class="value">{{ pair.value }}</span>{{ quote }}
+    {%- endif -%}
+    {%- unless forloop.last -%}
+    {{ comma }}
+    {%- endunless %}
   </div>
-  <div class="block">
-    {% if site.json.profiles %}
-    <span class="array-key">profiles</span>
-    <div class="array">
-      {% for i in site.json.profiles %}
-      <p class="array-attr"><a href="{{ i | slice: 1 }}" {{ target }}>{{ i | slice: 0 }}</a></p>
-      {% endfor %}
-    </div>
-    {% endif %}
-  </div>
-</main>
+  {% endfor %}
+</div>
