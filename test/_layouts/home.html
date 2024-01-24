@@ -4,9 +4,21 @@ layout: default
 
 <main>
   <div class="object">
-    {% for block in site.data.json %}
+    {% for i in site.data.json %}
     <div class="block">
-      {{ block }}
+      {% for j in i.block %}
+      <div class="pair">
+        {% if j.typed %}
+        {% include typed.html %}
+        {% elsif j.value.first.key %}
+        hash
+        {% elsif j.value.first %}
+        array
+        {% else %}
+        {% include string.html %}
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
     {% endfor %}
   </div>
