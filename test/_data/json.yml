@@ -1,51 +1,45 @@
-- block:
-    - key: Name
-      value: Place Holder
-    - key: Description
-      value:
-        - Hello!
-        - This tiny website
-        - Looks like JSON
-      typed: true
-- block:
-    - key: CV
-      value: cv.pdf
-      url: /cv.pdf
-- block:
-    - key: Address
-      value:
-        - University of Jekyll
-        - Department of Themes
-        - 123 Main St, Anytown, USA
-- block:
-    - key: Contact
-      value:
-        - key: Office
-          value: Foobar Hall 1.23
-        - key: Phone
-          value: +1 234 567 890
-        - key: Email
-          value: username@domain.com
-          url: "mailto:username@domain.com"
-- block:
-    - key: Demo
-      value: piazzai.github.io/hacked-jekyll
-      url: https://piazzai.github.io/hacked-jekyll
-    - key: Source
-      value: github.com/piazzai/hacked-jekyll
-      url: https://github.com/piazzai/hacked-jekyll
-- block:
-    - key: Profiles
-      value:
-        - value: Facebook
-          url: https://www.facebook.com
-        - value: X
-          url: https://www.x.com
-        - value: Instagram
-          url: https://www.instagram.com
-        - value: LinkedIn
-          url: https://www.linkedin.com
-        - value: StackOverflow
-          url: https://stackoverflow.com
-        - value: GitHub
-          url: https://github.com
+- key: Name
+  value: Place Holder
+- key: Description
+  value:
+    - Hello!
+    - This tiny website
+    - Looks like JSON
+  typed: true
+- key: CV
+  value: cv.pdf
+  url: /cv.pdf
+- key: Address
+  value:
+    - University of Jekyll
+    - Department of Themes
+    - 123 Main St, Anytown, USA
+- key: Contact
+  value:
+    - key: Office
+      value: Foobar Hall 1.23
+    - key: Phone
+      value: +1 234 567 890
+    - key: Email
+      value: username@domain.com
+      url: "mailto:username@domain.com"
+- key: Demo
+  value: piazzai.github.io/hacked-jekyll
+  url: https://piazzai.github.io/hacked-jekyll
+- key: Source
+  value: github.com/piazzai/hacked-jekyll
+  url: https://github.com/piazzai/hacked-jekyll
+- key: Profiles
+  value:
+    - value: Facebook
+      url: https://www.facebook.com
+    - value: X
+      url: https://www.x.com
+    - value: Instagram
+      url: https://www.instagram.com
+    - value: LinkedIn
+      url: https://www.linkedin.com
+    - value: StackOverflow
+      url: https://stackoverflow.com
+    - value: GitHub
+      url: https://github.com
