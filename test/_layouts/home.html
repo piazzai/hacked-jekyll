@@ -27,7 +27,7 @@ layout: default
     {% if value.url -%}
     <p class="ms">
       {{ quote }}<span class="key">{{ value.key }}</span>{{ quote }}:
-      {{ quote }}<a class="value" href="{{ value.url }}" {{ target }}>{{ value.value }}</a></span>{{ quote }}
+      {{ quote }}<a class="value" href="{{ value.url }}" {{ target }}>{{ value.value }}</a>{{ quote }}
       {%- unless forloop.last -%}
       {{ comma }}
       {%- endunless %}
@@ -65,7 +65,7 @@ layout: default
     ]
     {%- elsif pair.url -%}
     {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
-    {{ quote }}<a class="value" href="{{ pair.url }}" {{ target }}>{{ pair.value }}</a></span>{{ quote }}
+    {{ quote }}<a class="value" href="{{ pair.url }}" {{ target }}>{{ pair.value }}</a>{{ quote }}
     {%- else -%}
     {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
     {{ quote }}<span class="value">{{ pair.value }}</span>{{ quote }}
