@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<main>
+    <div class="block">
+        <p>404</p>
+        <p>Page not found</p>
+    </div>
+    <div class="block">
+        {% assign home = site.url | split: "//" | slice: 1 %}
+        <a href="{{ site.url }}">{{ home }}</a>
+    </div>
+</main>

@@ -1,0 +1,88 @@
+---
+layout: default
+---
+
+{% assign target = 'target="_self"' %}
+{% if site.newtab %}
+{% assign target = 'target="_blank"' %}
+{% endif %}
+
+<main class="json">
+  <div class="block">
+    {% if site.json.name %}
+    <p><span class="key">name</span><span class="attr">{{ site.json.name }}</span></p>
+    {% else %}
+    <p><span class="key">name</span><span class="attr">{{ site.title }}</span></p>
+    {% endif %}
+    {% if site.json.description %}
+    {% if site.json.description.first %}
+    <div id="typed-strings">
+      {% for i in site.json.description %}
+      <span>{{ i | prepend: '"' | append: '",'}}</span>
+      {% endfor %}
+    </div>
+    <p><span class="key">description</span>{% include typed.html %}</p>
+    {% else %}
+    <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
+    {% endif %}
+    {% else %}
+    <p><span class="key">description</span><span class="attr">{{ site.description }}</span></p>
+    {% endif %}
+  </div>
+  <div class="block">
+    {% if site.json.cv %}
+    {% assign cv = site.json.cv | split: "/" | slice: -1 %}
+    <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}" {{ target }}>{{ cv }}</a></span></p>
+    {% endif %}
+  </div>
+  <div class="block">
+    {% if site.json.address %}
+    {% if site.json.address.first %}
+    <p><span class="array-key">address</span></p>
+    <div class="array">
+      {% for i in site.json.address %}
+      <p class="array-attr">{{ i }}</p>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p><span class="key">address</span><span class="attr">{{ site.json.address }}</span></p>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="block">
+    {% if site.json.contact %}
+    {% if site.json.contact.first %}
+    <p><span class="list-key">contact</span></p>
+    <div class="list">
+      {% for i in site.json.contact %}
+      <p><span class="list-subkey">{{ i | slice: 0 }}</span><span class="list-attr">{{ i | slice: 1 }}</span></p>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p><span class="key">contact</span><span class="attr">{{ site.json.contact }}</span></p>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="block">
+    {% if site.json.demo %}
+    {% assign demo = site.json.demo | split: "//" | slice: 1 %}
+    <p><span class="key">demo</span><span class="attr"><a href="{{ site.json.demo }}" {{ target }}>{{ demo }}</a></span>
+    </p>
+    {% endif %}
+    {% if site.json.source %}
+    {% assign source = site.json.source | split: "github.com/" | slice: 1 %}
+    <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}" {{ target }}>{{ source
+          }}</a></span></p>
+    {% endif %}
+  </div>
+  <div class="block">
+    {% if site.json.profiles %}
+    <span class="array-key">profiles</span>
+    <div class="array">
+      {% for i in site.json.profiles %}
+      <p class="array-attr"><a href="{{ i | slice: 1 }}" {{ target }}>{{ i | slice: 0 }}</a></p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</main>
