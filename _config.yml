@@ -3,8 +3,8 @@ description: ""
 baseurl: ""
 url: ""
 
-quote: true
-comma: true
+show_quotes: true
+show_commas: true
 target: "_self"
 
 plugins:

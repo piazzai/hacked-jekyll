@@ -2,10 +2,10 @@
 layout: default
 ---
 
-{% if site.quote -%}
+{% if site.show_quotes -%}
 {% assign quote = '"' -%}
 {% endif -%}
-{% if site.comma -%}
+{% if site.show_commas -%}
 {% assign comma = ',' -%}
 {% endif -%}
 {% assign target = site.target | prepend: 'target="' | append: '"' -%}
