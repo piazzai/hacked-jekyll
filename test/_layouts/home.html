@@ -2,15 +2,12 @@
 layout: default
 ---
 
-{% assign target = 'target="_self"' %}
-{% if site.newtab %}
-{% assign target = 'target="_blank"' %}
-{% endif %}
-
-<main class="object">
-  {% for block in site.data.json %}
-  <div class="block">
-    {{ block }}
+<main>
+  <div class="object">
+    {% for block in site.data.json %}
+    <div class="block">
+      {{ block }}
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </main>
