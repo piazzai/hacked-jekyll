@@ -5,6 +5,7 @@ url: https://piazzai.github.io/hacked-jekyll
 
 quote: true
 comma: true
+target: "_self"
 
 exclude:
   - LICENSE
