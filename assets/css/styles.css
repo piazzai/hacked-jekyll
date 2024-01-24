@@ -88,11 +88,7 @@ a:active {
 }
 
 .error,
-.key {
-  text-transform: lowercase;
-  color: {{ site.color_keyval }};
-}
-
+.key,
 .value {
   {% if site.lowercase -%}
   text-transform: lowercase;
