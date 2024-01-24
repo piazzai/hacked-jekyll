@@ -24,14 +24,10 @@
       value: username@domain.com
       url: "mailto:username@domain.com"
 - key: Source
-  value: github.com/piazzai/hacked-jekyll
+  value: piazzai/hacked-jekyll
   url: https://github.com/piazzai/hacked-jekyll
 - key: Profiles
   value:
-    - value: Facebook
-      url: https://www.facebook.com
-    - value: X
-      url: https://www.x.com
     - value: Instagram
       url: https://www.instagram.com
     - value: LinkedIn
