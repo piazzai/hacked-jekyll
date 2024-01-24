@@ -2,24 +2,32 @@
 layout: default
 ---
 
-<main>
-  <div class="object">
-    {% for i in site.data.json %}
-    <div class="block">
-      {% for j in i.block %}
-      <div class="pair">
-        {% if j.typed %}
-        {% include typed.html %}
-        {% elsif j.value.first.key %}
-        hash
-        {% elsif j.value.first %}
-        array
-        {% else %}
-        {% include string.html %}
-        {% endif %}
-      </div>
-      {% endfor %}
+{% assign quote = '"' -%}
+{% assign comma = ',' -%}
+
+<div id="json">
+  {% for pair in site.data.json %}
+  <div class="my ms">
+    {% if pair.typed -%}
+    <div id="strings">
+      {% for value in pair.value -%}
+      <span>{{ value }}</span>
+      {%- endfor %}
     </div>
-    {% endfor %}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
+    {{ quote }}<span class="value"><span id="typed"></span></span>{{ quote }}
+    {%- elsif pair.value.first.key -%}
+    hash
+    {%- elsif pair.value.first -%}
+    array
+    {%- elsif pair.url -%}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
+    {{ quote }}<a class="value" href="{{ pair.url }}" target="{{ site.target }}">{{ pair.value }}</a></span>{{ quote }}
+    {%- else -%}
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
+    {{ quote }}<span class="value">{{ pair.value }}</span>{{ quote }}
+    {%- endif -%}
+    {{ comma }}
   </div>
-</main>
+  {% endfor %}
+</div>

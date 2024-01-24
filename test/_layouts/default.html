@@ -5,7 +5,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>{{ site.title }}</title>
 
 {% seo title=false %}
@@ -14,16 +13,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="manifest" href="assets/site.webmanifest">
-
   <link rel="stylesheet" href="assets/css/normalize.css" />
   <link rel="stylesheet" href="assets/css/open-color.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-
   <script src="assets/js/typed.umd.js"></script>
 </head>
 
 <body>
-  {{ content }}
+  <main>
+
+{{ content }}
+
+  </main>
   <script>
     var typed = new Typed("#typed", {
       stringsElement: "#strings",
