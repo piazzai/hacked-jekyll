@@ -10,7 +10,32 @@
 }
 
 .block {
-  margin-left: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.pair {
+  margin-left: 1.5rem;
+}
+
+.key {
+  text-transform: lowercase;
+
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '":';
+  }
+}
+
+.value {
+  text-transform: lowercase;
+
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '"';
+  }
 }
