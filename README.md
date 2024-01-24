@@ -105,9 +105,9 @@ All color defaults use the naming convention of the Open Color library ([read he
 
 ```yaml
 color_bg: var(--oc-indigo-8)
-color_punct: red
+color_punct: black
 color_keyval: '#fff'
-color_hover: '#cc5de8`
+color_hover: '#cc5de8'
 ```
 
 If you use Open Color names, remember to wrap them in a CSS variable.
