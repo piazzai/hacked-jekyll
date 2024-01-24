@@ -1,0 +1,7 @@
+{% if j.url %}
+<span class="key">{{ j.key }}</span>
+<span class="value"><a href="{{ j.url }}" target="{{ site.target }}">{{ j.value }}</a></span>
+{% else %}
+<span class="key">{{ j.key }}</span>
+<span class="value">{{ j.value }}</span>
+{% endif %}
