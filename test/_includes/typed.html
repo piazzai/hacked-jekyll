@@ -3,11 +3,13 @@
   <span>{{ k }}</span>
   {% endfor %}
 </div>
-{% include quote.html -%}
-<span class="key">{{ j.key }}</span>
-{%- include quote.html -%}
-:&nbsp;
-{%- include quote.html -%}
-<span class="value"><span id="typed"></span></span>
-{%- include quote.html %}
-{%- include comma.html %}
+<p>
+  {% include quote.html -%}
+  <span class="key">{{ j.key }}</span>
+  {%- include quote.html -%}
+  :&nbsp;
+  {%- include quote.html -%}
+  <span class="value"><span id="typed"></span></span>
+  {%- include quote.html %}
+  {%- include comma.html %}
+</p>
