@@ -1,6 +1,6 @@
 @font-face {
   font-family: "hack";
-  src: url("../fonts/hack-regular-subset.woff2") format("woff2");
+  src: url("../webfonts/hack-regular-subset.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "hack";
-  src: url("../fonts/hack-italic-subset.woff2") format("woff2");
+  src: url("../webfonts/hack-italic-subset.woff2") format("woff2");
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
