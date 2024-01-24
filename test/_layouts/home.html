@@ -8,6 +8,7 @@ layout: default
 {% if site.comma -%}
 {% assign comma = ',' -%}
 {% endif -%}
+{% assign target = site.target | prepend: 'target="' | append: '"' -%}
 
 <div id="json">
   {% for pair in site.data.json %}
@@ -21,17 +22,57 @@ layout: default
     {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
     {{ quote }}<span class="value"><span id="typed"></span></span>{{ quote }}
     {%- elsif pair.value.first.key -%}
-    hash
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}: [
+    {% for value in pair.value -%}
+    {% if value.url -%}
+    <p class="ms">
+      {{ quote }}<span class="key">{{ value.key }}</span>{{ quote }}:
+      {{ quote }}<a class="value" href="{{ value.url }}" {{ target }}>{{ value.value }}</a></span>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% else -%}
+    <p class="ms">
+      {{ quote }}<span class="key">{{ value.key }}</span>{{ quote }}:
+      {{ quote }}<span class="value">{{ value.value }}</span>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% endif -%}
+    {%- endfor -%}
+    ]
     {%- elsif pair.value.first -%}
-    array
+    {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}: [
+    {% for value in pair.value -%}
+    {% if value.url -%}
+    <p class="ms">
+      {{ quote }}<a class="value" href="{{ value.url }}" {{ target }}>{{ value.value }}</a>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% else -%}
+    <p class="ms">
+      {{ quote }}<span class="value">{{ value }}</span>{{ quote }}
+      {%- unless forloop.last -%}
+      {{ comma }}
+      {%- endunless %}
+    </p>
+    {% endif -%}
+    {%- endfor -%}
+    ]
     {%- elsif pair.url -%}
     {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
-    {{ quote }}<a class="value" href="{{ pair.url }}" target="{{ site.target }}">{{ pair.value }}</a></span>{{ quote }}
+    {{ quote }}<a class="value" href="{{ pair.url }}" {{ target }}>{{ pair.value }}</a></span>{{ quote }}
     {%- else -%}
     {{ quote }}<span class="key">{{ pair.key }}</span>{{ quote }}:
     {{ quote }}<span class="value">{{ pair.value }}</span>{{ quote }}
     {%- endif -%}
+    {%- unless forloop.last -%}
     {{ comma }}
+    {%- endunless %}
   </div>
   {% endfor %}
 </div>
