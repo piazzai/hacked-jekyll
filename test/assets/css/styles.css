@@ -51,6 +51,7 @@ a {
   margin-left: 1.5rem;
 }
 
+.error,
 .key,
 .value {
   text-transform: lowercase;
