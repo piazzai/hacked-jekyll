@@ -19,9 +19,41 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: var(--oc-gray-9);
+  color: var(--oc-green-9);
+}
+
+a {
+  font-style: italic;
+}
+
+#json {
+  white-space: nowrap;
+}
+
+#json:before {
+  content: "{";
+}
+
+#json:after {
+  content: "}";
+}
+
+.my {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ms {
+  margin-left: 1.5rem;
+}
+
+.key,
+.value {
+  text-transform: lowercase;
   color: var(--oc-green-4);
 }
 
+/* 
 main {
   position: absolute;
   width: 100%;
@@ -54,4 +86,4 @@ a {
   &:active {
     color: var(--oc-green-5);
   }
-}
+} */
