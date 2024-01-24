@@ -1,0 +1,101 @@
+---
+---
+
+@font-face {
+  font-family: "hack";
+  src: url("../webfonts/hack-regular-subset.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "hack";
+  src: url("../webfonts/hack-italic-subset.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "hack", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: {{ site.color_bg }};
+  color: {{ site.color_punct }};
+}
+
+main {
+  position: absolute;
+  width: 98%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 576px) {
+  main {
+    font-size: 18px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    font-size: 20px;
+    width: 80%;
+  }
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  font-style: italic;
+}
+
+a:hover,
+a:active {
+  color: {{ site.color_hover }};
+}
+
+#json {
+  white-space: nowrap;
+}
+
+#json:before {
+  content: "{";
+}
+
+#json:after {
+  content: "}";
+}
+
+.my {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1.5rem;
+}
+
+.ms {
+  margin-left: 1.5rem;
+}
+
+.error,
+.key {
+  text-transform: lowercase;
+  color: {{ site.color_keyval }};
+}
+
+.value {
+  {% if site.lowercase -%}
+  text-transform: lowercase;
+  {% endif -%}
+  color: {{ site.color_keyval }};
+}
