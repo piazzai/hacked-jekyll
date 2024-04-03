@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/sitemap.xml
+Sitemap: https://piazzai.github.io/hacked-jekyll/sitemap.xml
