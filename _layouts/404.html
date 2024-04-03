@@ -2,8 +2,10 @@
 layout: default
 ---
 
+{% assign return = site.url | append: site.baseurl | split: '//' | slice: 1 -%}
+
 <div class="error">
     <h1>404</h1>
     <p>Page not found</p>
-    <p class="mt"><a href="{{ site.url }}">{{ site.url | split: "//" | slice: 1 }}</a></p>
+    <p class="mt"><a href="{{ site.url | append: site.baseurl }}">{{ return }}</a></p>
 </div>
