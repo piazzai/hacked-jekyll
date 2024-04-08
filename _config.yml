@@ -1,7 +1,7 @@
 title: "NoM Labz"
-description: ""
-baseurl: ""
-url: ""
+description: "NoM Labs Supports Zenon Network"
+baseurl: /nom-labz
+url: https://nomlabz.org
 
 lowercase: true
 color_bg: var(--oc-gray-9)
