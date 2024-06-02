@@ -13,6 +13,7 @@ target: _self
 exclude:
   - LICENSE
   - README.md
+  - vendor/
 
 plugins:
   - jekyll-seo-tag
