@@ -1,17 +1,17 @@
 @font-face {
   font-family: "hack";
-  src: url("../webfonts/hack-regular-subset.woff2") format("woff2");
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
+  src: url("../webfonts/hack-regular-subset.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "hack";
-  src: url("../webfonts/hack-italic-subset.woff2") format("woff2");
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
+  src: url("../webfonts/hack-italic-subset.woff2") format("woff2");
 }
 
 body {
@@ -86,15 +86,11 @@ a:active {
 
 .key {
   color: $color_key;
+  text-transform: $transform_key;
 }
 
 .error,
 .value {
-  color: $color_val;
-}
-
-.error,
-.key,
-.value {
-  text-transform: $transform_case;
+  color: $color_value;
+  text-transform: $transform_value;
 }
