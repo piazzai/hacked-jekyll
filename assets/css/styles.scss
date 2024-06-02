@@ -1,0 +1,17 @@
+---
+---
+
+$color_bg: {{ site.color_bg | default: 'var(--oc-gray-9)' }};
+$color_punct: {{ site.color_punct | default: 'var(--oc-green-9)' }};
+$color_key: {{ site.color_key | default: 'var(--oc-green-4)' }};
+$color_val: {{ site.color_val | default: 'var(--oc-green-4)' }};
+$color_hover: {{ site.color_hover | default: 'var(--oc-green-5)' }};
+
+{% if site.lowercase -%}
+$transform_case: lowercase;
+{% else -%}
+$transform_case: none;
+{% endif -%}
+
+@import "default";
+@import "custom";

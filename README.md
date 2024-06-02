@@ -112,6 +112,8 @@ color_hover: '#cc5de8'
 
 If you use Open Color names, remember to wrap them in a CSS variable.
 
+Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build.
+
 ## Bugs
 
 If you find any problem using the theme, please [open an issue](https://github.com/piazzai/hacked-jekyll/issues).

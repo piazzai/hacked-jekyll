@@ -5,7 +5,6 @@
   font-weight: 400;
   text-rendering: optimizeLegibility;
 }
-
 @font-face {
   font-family: "hack";
   src: url("../webfonts/hack-italic-subset.woff2") format("woff2");
@@ -13,7 +12,6 @@
   font-weight: 400;
   text-rendering: optimizeLegibility;
 }
-
 body {
   font-family: "hack", monospace;
   font-size: 16px;
@@ -36,14 +34,12 @@ main {
     width: 90%;
   }
 }
-
 @media (min-width: 768px) {
   main {
     font-size: 20px;
     width: 80%;
   }
 }
-
 h1,
 p {
   margin: 0;
@@ -84,9 +80,17 @@ a:active {
   margin-left: 1.5rem;
 }
 
+.key {
+  color: var(--oc-green-4);
+}
+
+.error,
+.value {
+  color: var(--oc-green-4);
+}
+
 .error,
 .key,
 .value {
   text-transform: lowercase;
-  color: var(--oc-green-4);
 }
