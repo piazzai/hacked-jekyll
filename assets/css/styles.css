@@ -87,11 +87,19 @@ a:active {
   margin-left: 1.5rem;
 }
 
+.key {
+  color: {{ site.color_key }};
+}
+
+.error,
+.value {
+  color: {{ site.color_val }};
+}
+
+{% if site.lowercase -%}
 .error,
 .key,
 .value {
-  {% if site.lowercase -%}
   text-transform: lowercase;
-  {% endif -%}
-  color: {{ site.color_keyval }};
 }
+{% endif -%}
