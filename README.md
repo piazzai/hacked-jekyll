@@ -90,24 +90,25 @@ Finally, it is possible to render `value` as a hash, which is a list of key-valu
 
 You can customize the appearance of the rendered JSON object using site variables. These have default values that can be overridden by specifying a new value in your `_config.yml` file.
 
-| Variable       |       Default       | Purpose                                               |
-| -------------- | :-----------------: | ----------------------------------------------------- |
-| `lowercase`    |       `true`        | Set all keys and values to lowercase                  |
-| `color_bg`     | `var(--oc-gray-9)`  | Set the background color                              |
-| `color_punct`  | `var(--oc-green-9)` | Set the color of quote marks, commas, and parentheses |
-| `color_keyval` | `var(--oc-green-4)` | Set the color of all keys and values                  |
-| `color_hover`  | `var(--oc-green-5)` | Set the color of values on hover (if they are links)  |
-| `show_quotes`  |       `true`        | Display quote marks around keys and values            |
-| `show_commas`  |       `true`        | Display commas between key-value pairs                |
-| `target`       |       `_self`       | Set the target tab/window of hyperlinks               |
+| Variable      |       Default       | Purpose                                               |
+| ------------- | :-----------------: | ----------------------------------------------------- |
+| `lowercase`   |       `true`        | Set all keys and values to lowercase                  |
+| `color_bg`    | `var(--oc-gray-9)`  | Set the background color                              |
+| `color_punct` | `var(--oc-green-9)` | Set the color of quote marks, commas, and parentheses |
+| `color_key`   | `var(--oc-green-4)` | Set the color of all keys                             |
+| `color_val`   | `var(--oc-green-4)` | Set the color of all key values                       |
+| `color_hover` | `var(--oc-green-5)` | Set the color of values on hover (if they are links)  |
+| `show_quotes` |       `true`        | Display quote marks around keys and values            |
+| `show_commas` |       `true`        | Display commas between key-value pairs                |
+| `target`      |       `_self`       | Set the target tab/window of hyperlinks               |
 
 All color defaults use the naming convention of the Open Color library ([read here](https://yeun.github.io/open-color/documents.html)). You can change them to any other color in the library, any base CSS color, or any three or six-digit hex color. For example:
 
 ```yaml
 color_bg: var(--oc-indigo-8)
 color_punct: black
-color_keyval: '#fff'
-color_hover: '#cc5de8'
+color_key: '#fff'
+color_val: '#cc5de8'
 ```
 
 If you use Open Color names, remember to wrap them in a CSS variable.
