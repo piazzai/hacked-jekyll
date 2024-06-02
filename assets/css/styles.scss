@@ -1,17 +1,26 @@
 ---
 ---
 
-$color_bg: {{ site.color_bg | default: 'var(--oc-gray-9)' }};
-$color_punct: {{ site.color_punct | default: 'var(--oc-green-9)' }};
-$color_key: {{ site.color_key | default: 'var(--oc-green-4)' }};
-$color_val: {{ site.color_val | default: 'var(--oc-green-4)' }};
-$color_hover: {{ site.color_hover | default: 'var(--oc-green-5)' }};
+$color_bg: var(--oc-{{ site.color_bg | default: 'gray-9' }});
+$color_punct: var(--oc-{{ site.color_punct | default: 'green-9' }});
+$color_key: var(--oc-{{ site.color_key | default: 'green-4' }});
+$color_value: var(--oc-{{ site.color_value | default: 'green-4' }});
+$color_hover: var(--oc-{{ site.color_hover | default: 'green-5' }});
 
-{% if site.lowercase -%}
-$transform_case: lowercase;
+{% case site.lowercase -%}
+{% when 'keys' -%}
+$transform_key: lowercase;
+$transform_value: none;
+{% when 'values' -%}
+$transform_key: none;
+$transform_value: lowercase;
+{% when false -%}
+$transform_key: none;
+$transform_value: none;
 {% else -%}
-$transform_case: none;
-{% endif -%}
+$transform_key: lowercase;
+$transform_value: lowercase;
+{% endcase -%}
 
 @import "default";
 @import "custom";

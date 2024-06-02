@@ -86,15 +86,11 @@ a:active {
 
 .key {
   color: $color_key;
+  text-transform: $transform_key;
 }
 
 .error,
 .value {
-  color: $color_val;
-}
-
-.error,
-.key,
-.value {
-  text-transform: $transform_case;
+  color: $color_value;
+  text-transform: $transform_value;
 }

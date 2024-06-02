@@ -5,11 +5,6 @@ url: https://piazzai.github.io
 
 theme: hacked-jekyll
 
-lowercase: true
-show_quotes: true
-show_commas: true
-target: _self
-
 exclude:
   - LICENSE
   - README.md
